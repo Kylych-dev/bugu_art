@@ -1,6 +1,6 @@
 ## API Endpoints
 
-### Authentication/Authorization
+### Аутентификация/Авторизация
 
 | HTTP Method | Endpoint               | Description                    |
 |-------------|------------------------|--------------------------------|
@@ -8,14 +8,14 @@
 | POST        | `/login/`              | User login                     |
 | POST        | `/logout/`             | User logout                    |
 
-### Articles
+### Статьи
 
 | HTTP Method | Endpoint                   | Description                        |
 |-------------|----------------------------|------------------------------------|
 | GET, POST   | `/articles/`               | List all articles / Create article |
 | GET, PUT, DELETE | `/articles/<int:pk>/` | Retrieve, update, delete article   |
 
-### Users (Commented out, not active)
+### Пользователи
 
 | HTTP Method | Endpoint                   | Description                        |
 |-------------|----------------------------|------------------------------------|
@@ -24,13 +24,11 @@
 
 
 
-**Bugu Article** is a RESTful API project designed for managing articles and user authentication. <br> 
-The application provides endpoints for user registration, login, and logout, as well as for creating, <br> retrieving, updating, and deleting articles.
 
 ## Features
 
-- **User Authentication:** Register, login, and logout users. <br>
-- **Article Management:** Create, list, update, and delete articles. <br>
+- Аутентификация пользователей: Регистрация, вход и выход пользователей. <br>
+- Управление статьями: Создание, отображение, обновление и удаление статей. <br>
 
 
 
@@ -48,15 +46,15 @@ email: **`mirbekov1kylych@gmail.com`**
 
 
 
-## Testing with Postman
+## Тестирование с помощью Postman
 
-It is recommended to test the API endpoints using Postman for a more interactive and comprehensive testing experience. Here are some suggestions on what to test:
+Рекомендуется тестировать конечные точки API с помощью Postman для более интерактивного и комплексного тестирования. Вот несколько рекомендаций по тестированию:
 
 ### Authentication
 
 1. **Register a New User:**
    - **Endpoint:** `POST /register/`
-   - **Description:** Create a new user account by providing an email, username, and password.
+   - **Description:** Создайте новую учетную запись пользователя, предоставив email, имя пользователя и пароль.
    - **Payload Example:**
      ```json
      {
@@ -124,11 +122,3 @@ It is recommended to test the API endpoints using Postman for a more interactive
 5. **Delete an Article:**
    - **Endpoint:** `DELETE /articles/{id}/`
    - **Description:** Delete a specific article.
-
-### Tips for Testing
-
-- Ensure that you include the necessary headers for authentication (e.g., `Authorization: Bearer your_access_token`).
-- Test various scenarios, including valid and invalid data, to verify the robustness of the API.
-- Use Postman's environment variables to manage different environments (e.g., development, production) and tokens.
-
-By using Postman, you can interactively test the API and verify that all endpoints work as expected. This will help ensure the correctness and reliability of your application.
